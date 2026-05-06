@@ -32,7 +32,7 @@ async function initDivisionDetail() {
 }
 
 function renderDivision(div) {
-    document.title = `${div.name} — VeraStitch Co.`;
+    document.title = `${div.name} — EUROASIA Co.`;
     document.getElementById('divisionName').textContent = div.name;
     document.getElementById('divisionShortDesc').textContent = div.description;
     document.getElementById('divisionLongDesc').textContent = div.longDescription;

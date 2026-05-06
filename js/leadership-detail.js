@@ -35,7 +35,7 @@ async function initLeadershipDetail() {
 
 function renderProfile(profile) {
     const container = document.getElementById('leadershipContent');
-    document.title = `${profile.name} — VeraStitch Co.`;
+    document.title = `${profile.name} — EUROASIA Co.`;
     
     const contentHtml = profile.content.map(p => `<p>${p}</p>`).join('');
 
@@ -57,7 +57,7 @@ function renderProfile(profile) {
                 
                 <div class="profile-content">
                     ${contentHtml}
-                    <p class="mt-4"><strong>${profile.name}</strong><br/><em>${profile.title}, VeraStitch Co. Ltd.</em></p>
+                    <p class="mt-4"><strong>${profile.name}</strong><br/><em>${profile.title}, EUROASIA Co. Ltd.</em></p>
                 </div>
             </div>
         </div>

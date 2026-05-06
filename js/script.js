@@ -1,5 +1,5 @@
 /* ================================================================
-   VERASTITCH CO. — script.js
+   EUROASIA CO. — script.js
    Modules: Navbar | Animations | Counters | Product Carousel
             See More Toggle | Workflow | Scroll Top | Form
    ================================================================ */
@@ -139,17 +139,8 @@ function initNavbar() {
 
   // Smooth scroll for all anchor links + close mobile menu
   document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', e => {
-      const href = link.getAttribute('href');
-      if (!href || href === '#') return;
-      const target = document.querySelector(href);
-      if (!target) return;
-      e.preventDefault();
-      const offset = nav.offsetHeight + 8;
-      const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
-      window.scrollTo({ top, behavior: 'smooth' });
-
-      // Close mobile collapse
+    link.addEventListener('click', () => {
+      // Close mobile collapse if open
       const collapseEl = document.getElementById('navMenu');
       if (collapseEl && collapseEl.classList.contains('show')) {
         const bsCollapse = bootstrap.Collapse.getInstance(collapseEl);
@@ -318,6 +309,7 @@ function initProductCarousel() {
       dot.addEventListener('click', () => {
         state[cat].index = i * vis;
         applyTransform(cat);
+        resetAutoSlide();
       });
       dotsWrap.appendChild(dot);
     }
@@ -405,9 +397,11 @@ function initProductCarousel() {
       if (dx < -threshold) {
         state[cat].index++;
         applyTransform(cat);
+        resetAutoSlide();
       } else if (dx > threshold) {
         state[cat].index--;
         applyTransform(cat);
+        resetAutoSlide();
       }
     }, { passive: true });
   });
@@ -421,6 +415,43 @@ function initProductCarousel() {
 
   /* ── Initial render ── */
   switchTab(firstCat);
+
+  /* ── Auto Slide ── */
+  let autoSlideInterval;
+  const startAutoSlide = () => {
+    stopAutoSlide(); // Ensure no duplicates
+    autoSlideInterval = setInterval(() => {
+      const s = state[activeCat];
+      if (!s) return;
+      const vis = visibleCount();
+      const maxIndex = Math.max(0, s.total - vis);
+      if (s.index >= maxIndex) {
+        s.index = 0;
+      } else {
+        s.index++;
+      }
+      applyTransform(activeCat);
+    }, 4500);
+  };
+
+  const stopAutoSlide = () => clearInterval(autoSlideInterval);
+  const resetAutoSlide = () => { if (autoSlideInterval) startAutoSlide(); };
+
+  startAutoSlide();
+
+  const carouselContainer = document.querySelector('.prod-carousel-outer');
+  if (carouselContainer) {
+    carouselContainer.addEventListener('mouseenter', stopAutoSlide);
+    carouselContainer.addEventListener('mouseleave', startAutoSlide);
+  }
+
+  /* ── Add reset to interactions ── */
+  tabs.forEach(tab => tab.addEventListener('click', resetAutoSlide));
+  if (prevBtn) prevBtn.addEventListener('click', resetAutoSlide);
+  if (nextBtn) nextBtn.addEventListener('click', resetAutoSlide);
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') resetAutoSlide();
+  });
 }
 
 
@@ -529,11 +560,19 @@ window.submitForm = submitForm;
 function initHeroCarousel() {
   const el = document.getElementById('heroCarousel');
   if (!el) return;
-  window.addEventListener('load', () => {
-    let c = bootstrap.Carousel.getInstance(el);
-    if (!c) c = new bootstrap.Carousel(el, { interval: 3500, ride: 'carousel', wrap: true });
-    c.cycle();
-  });
+  
+  // Bootstrap 5 auto-init might have already happened due to data-bs-ride="carousel"
+  let c = bootstrap.Carousel.getInstance(el);
+  if (!c) {
+    c = new bootstrap.Carousel(el, {
+      interval: 3500,
+      ride: 'carousel',
+      wrap: true
+    });
+  }
+  
+  // Force cycle to ensure it moves
+  c.cycle();
 }
 
 /* ================================================================
