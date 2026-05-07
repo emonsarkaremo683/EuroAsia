@@ -25,6 +25,15 @@
   --tr:           .4s cubic-bezier(.4,0,.2,1);
 }
 
+/* Utility Colors & Backgrounds */
+.bg-navy { background-color: var(--navy) !important; }
+.bg-green { background-color: var(--green) !important; }
+.text-navy { color: var(--navy) !important; }
+.text-green { color: var(--green) !important; }
+.text-gold { color: var(--gold) !important; }
+.text-white-60 { color: rgba(255, 255, 255, 0.6) !important; }
+.text-white-50 { color: rgba(255, 255, 255, 0.5) !important; }
+
 /* ── Base ──────────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { 
@@ -312,92 +321,119 @@ a { text-decoration: none; transition: var(--tr); }
 .btn-see-more.expanded:hover { background: var(--green); color: var(--white); }
 
 /* ================================================================
-   PRODUCTS — Category Carousels
+   PRODUCTS — Infinite Marquee Rows
 ================================================================ */
+.overflow-hidden { overflow: hidden !important; }
 
-/* Tabs scroll wrapper */
-.prod-tabs-outer {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  padding-bottom: 4px;
-}
-.prod-tabs-outer::-webkit-scrollbar { display: none; }
-
-.prod-tabs {
-  display: flex; gap: 8px;
-  width: max-content; /* allow horizontal scroll on mobile */
-  padding: 4px 2px;
-}
-
-.prod-tab {
-  background: var(--white); border: 1.5px solid var(--border); color: var(--text-muted);
-  font-size: .82rem; font-weight: 600; padding: 10px 20px; border-radius: 100px;
-  cursor: pointer; white-space: nowrap; transition: var(--tr);
-}
-.prod-tab:hover { border-color: var(--navy); color: var(--navy); }
-.prod-tab.active {
-  background: var(--navy); border-color: var(--navy); color: var(--white);
-  box-shadow: 0 4px 16px rgba(10,26,47,.18);
-}
-
-/* Outer carousel wrapper */
-.prod-carousel-outer {
+.marquee-row {
+  margin-bottom: 40px;
   position: relative;
-  padding: 8px 0 48px;  /* room for dots at bottom */
+  width: 100%;
 }
 
-#prodPanelsContainer {
-  overflow: hidden;
-  margin: -15px -10px;
-  padding: 15px 10px;
+.marquee-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 16px;
 }
 
-/* Panels — only active one shows */
-.prod-panel { display: none; }
-.prod-panel.active { display: block; }
+.marquee-track-container {
+  overflow-x: auto;
+  position: relative;
+  width: 100%;
+  display: flex;
+  padding: 10px 0; /* Add vertical padding instead of track inline padding */
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  cursor: grab;
+}
+.marquee-track-container::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+.marquee-track-container:active {
+  cursor: grabbing;
+}
 
-/* Track — horizontal scroll container */
-.prod-track {
+.marquee-track {
   display: flex;
   gap: 20px;
-  transition: transform .45s cubic-bezier(.4,0,.2,1);
-  will-change: transform;
-  /* touch scroll on mobile */
-  -webkit-overflow-scrolling: touch;
+  width: max-content;
+  /* animation removed for JS control */
 }
 
-/* Each slide card */
-.prod-slide {
-  flex: 0 0 calc(25% - 15px);  /* 4 per row desktop */
-  min-width: 0;
+.marquee-group {
+  display: flex;
+  gap: 20px;
+  flex-shrink: 0;
 }
 
-/* Arrow buttons */
-.prod-arrow {
-  position: absolute; top: 50%; transform: translateY(-60%);
-  width: 44px; height: 44px; border-radius: 50%;
-  background: var(--white); border: 1.5px solid var(--border);
-  color: var(--navy); font-size: 1rem;
-  display: flex; align-items: center; justify-content: center;
-  cursor: pointer; z-index: 10; transition: var(--tr);
-  box-shadow: var(--shadow-sm);
-}
-.prod-arrow:hover { background: var(--navy); color: var(--white); border-color: var(--navy); box-shadow: var(--shadow-md); }
-.prod-arrow:disabled { opacity: .3; cursor: not-allowed; }
-.prod-arrow-prev { left: -22px; }
-.prod-arrow-next { right: -22px; }
+/* Animation handled by JS now */
 
-/* Dot indicators */
-.prod-dots {
-  display: flex; gap: 8px; justify-content: center;
-  position: absolute; bottom: 12px; left: 0; right: 0;
+.world-map {
+  width: 100%;
+  height: auto;
+  display: block;
 }
-.prod-dot {
-  width: 8px; height: 8px; border-radius: 50%;
-  background: var(--border); border: none; cursor: pointer; padding: 0; transition: var(--tr);
+
+.client-logo-hover:hover {
+  opacity: 1 !important;
+  filter: grayscale(0%) !important;
 }
-.prod-dot.active { background: var(--navy); width: 22px; border-radius: 4px; }
+
+/* ================================================================
+   GLOBAL FOOTPRINT
+================================================================ */
+.map-container {
+  overflow: hidden;
+  border-radius: 12px;
+  background: var(--white);
+  padding: 40px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border);
+}
+.map-pin {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: var(--navy);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  box-shadow: 0 0 0 4px rgba(10, 26, 47, 0.2);
+}
+.map-pin::after {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 100%; height: 100%;
+  background: var(--navy);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: pinPulse 2s infinite ease-out;
+}
+@keyframes pinPulse {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
+  100% { transform: translate(-50%, -50%) scale(3.5); opacity: 0; }
+}
+.map-pin[data-bs-toggle="tooltip"]:hover {
+  background: var(--green);
+}
+.map-pin[data-bs-toggle="tooltip"]:hover::after {
+  background: var(--green);
+}
+
+.marquee-slide {
+  width: 260px;
+  flex-shrink: 0;
+}
+.marquee-slide .product-card {
+  height: 100%;
+}
+.marquee-slide .product-img-wrap {
+  height: 120px;
+}
 
 .product-card {
   background: var(--white); border-radius: var(--radius);
@@ -407,7 +443,7 @@ a { text-decoration: none; transition: var(--tr); }
 }
 .product-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
 
-.product-img-wrap { position: relative; overflow: hidden; height: 210px; }
+.product-img-wrap { position: relative; overflow: hidden; height: 120px; }
 .product-img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
 .product-card:hover .product-img { transform: scale(1.07); }
 
@@ -655,7 +691,7 @@ a { text-decoration: none; transition: var(--tr); }
   /* Products carousel — 2 per row mobile */
   .prod-slide { flex: 0 0 calc(50% - 10px); }
   .prod-arrow { display: none; } /* hide arrows on mobile — swipe instead */
-  .product-img-wrap { height: 170px; }
+  .product-img-wrap { height: 120px; }
   .product-name  { font-size: .9rem; }
 
   /* Factory workflow — wrap nicely */
@@ -684,7 +720,7 @@ a { text-decoration: none; transition: var(--tr); }
   /* Products — still 2 per row but smaller */
   .prod-slide { flex: 0 0 calc(50% - 6px); }
   .prod-track { gap: 12px; }
-  .product-img-wrap { height: 150px; }
+  .product-img-wrap { height: 80px; }
   .brand-badge { font-size: .55rem; padding: 3px 8px; }
 
   /* Factory stats */
@@ -708,3 +744,168 @@ a { text-decoration: none; transition: var(--tr); }
   .hero-tag { font-size: .65rem; padding: 5px 12px; }
 }
 
+
+
+/* Global Map */
+ /* Section */
+  #globalFootprint.gf-section {
+    padding: 80px 20px;
+    background: #f8f9fa;          /* match your site bg */
+    font-family: inherit;
+  }
+  .gf-container {
+    max-width: 920px;
+    margin: 0 auto;
+  }
+ 
+  /* Header */
+  .gf-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .gf-pill {
+    display: inline-block;
+    background: #d1fae5;
+    color: #065f46;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 4px 14px;
+    border-radius: 999px;
+    margin-bottom: 14px;
+  }
+  .gf-heading {
+    font-size: 32px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 12px;
+  }
+  .gf-sub {
+    font-size: 16px;
+    color: #6b7280;
+    margin: 0 auto;
+    max-width: 500px;
+    line-height: 1.7;
+  }
+ 
+  /* Map */
+  .gf-map-wrap {
+    position: relative;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+  .gf-map-svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    background: #eef6fb;
+  }
+ 
+  /* Land */
+  .gf-land     { fill: #93c5a0; }
+  .gf-land-hq  { fill: #10b981; opacity: 0.85; }
+ 
+  /* Trade routes */
+  .gf-route {
+    fill: none;
+    stroke: #3b82f6;
+    stroke-width: 1.2;
+    stroke-dasharray: 5 4;
+    opacity: 0.45;
+  }
+ 
+  /* Pins */
+  .gf-pin { cursor: pointer; }
+  .gf-pin-dot { transition: r 0.18s ease; }
+  .gf-pin:hover .gf-pin-dot { r: 9; }
+  .gf-pin-hq   { fill: #10b981; }
+  .gf-pin-dest { fill: #3b82f6; }
+ 
+  /* HQ label */
+  .gf-pin-label {
+    font-size: 10px;
+    font-weight: 600;
+    fill: #065f46;
+  }
+ 
+  /* Pulse animation */
+  .gf-pulse {
+    fill: none;
+    stroke: #10b981;
+    stroke-width: 1.5;
+    animation: gfPulse 2.2s ease-out infinite;
+    transform-origin: center;
+  }
+  @keyframes gfPulse {
+    0%   { r: 7;  opacity: 0.8; }
+    100% { r: 22; opacity: 0;   }
+  }
+ 
+  /* Tooltip */
+  .gf-tooltip {
+    position: absolute;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 13px;
+    pointer-events: none;
+    white-space: nowrap;
+    display: none;
+    z-index: 20;
+    transform: translate(-50%, -115%);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.10);
+  }
+  .gf-tooltip.gf-show { display: block; }
+  .gf-tt-title { font-weight: 600; color: #111827; margin-bottom: 2px; }
+  .gf-tt-desc  { color: #6b7280; font-size: 12px; }
+ 
+  /* Legend */
+  .gf-legend {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 16px;
+    font-size: 13px;
+    color: #6b7280;
+    flex-wrap: wrap;
+  }
+  .gf-legend-item { display: flex; align-items: center; gap: 7px; }
+  .gf-legend-dot  { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+  .gf-legend-hq   { background: #10b981; }
+  .gf-legend-dest { background: #3b82f6; }
+ 
+  /* Stats */
+  .gf-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 16px;
+    margin-top: 40px;
+  }
+  .gf-stat {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 20px 16px;
+    text-align: center;
+  }
+  .gf-stat-num {
+    font-size: 30px;
+    font-weight: 700;
+    color: #111827;
+    line-height: 1;
+  }
+  .gf-stat-label {
+    font-size: 13px;
+    color: #6b7280;
+    margin-top: 6px;
+  }
+ 
+  /* Responsive */
+  @media (max-width: 600px) {
+    .gf-heading { font-size: 24px; }
+    .gf-stats   { grid-template-columns: repeat(2, 1fr); }
+  }

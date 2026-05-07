@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details — EUROASIA Co.</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="public/css/style.css" />
+    <link rel="stylesheet" href="public/css/pd.css" />
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav id="mainNav" class="navbar navbar-expand-lg fixed-top bg-navy" data-solid="true">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <span class="logo-icon"><i class="bi bi-scissors"></i></span>
+                <span class="logo-text">EUROASIA<span class="logo-dot">.</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+                aria-label="Toggle navigation">
+                <span class="toggler-bar"></span>
+                <span class="toggler-bar"></span>
+                <span class="toggler-bar"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+                    <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#messages">Leadership</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#products">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#factory">Production</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#certifications">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#why">Why Us</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="nav-cta btn" href="index.html#contact">Get a Quote</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="product-detail-hero">
+        <div class="container">
+            <a href="index.html#products" class="back-btn"><i class="bi bi-arrow-left"></i> Back to Products</a>
+
+            <div id="productDetailContent">
+                <div class="row g-4 g-lg-5">
+                    <div class="col-12 col-lg-6">
+                        <div class="detail-img-wrap skeleton" style="height: 500px;"></div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="skeleton mb-2" style="height: 20px; width: 100px;"></div>
+                        <div class="skeleton mb-4" style="height: 60px; width: 80%;"></div>
+                        <div class="skeleton mb-3" style="height: 100px;"></div>
+                        <div class="skeleton mb-4" style="height: 200px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- RELATED PRODUCTS -->
+    <section class="section-pad bg-white" id="relatedSection">
+        <div class="container">
+            <div class="section-header mb-5">
+                <h3 class="section-heading">Related Products</h3>
+            </div>
+            <div class="prod-carousel-outer">
+                <button class="carousel-arrow arrow-prev" id="relatedPrev" aria-label="Previous">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6" />
+                    </svg>
+                </button>
+
+                <div class="prod-track" id="relatedTrack">
+                    <!-- Populated by JS -->
+                </div>
+
+                <button class="carousel-arrow arrow-next" id="relatedNext" aria-label="Next">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+  <footer class="site-footer">
+		<div class="container">
+			<div class="row g-4 py-5">
+				<div class="col-12 col-sm-6 col-lg-4">
+					<div class="footer-brand d-flex align-items-center gap-2 mb-3">
+						<span class="logo-icon"><i class="bi bi-scissors"></i></span>
+						<span class="logo-text text-white">EUROASIA<span class="logo-dot">.</span></span>
+					</div>
+					<p class="footer-desc">Premium garment manufacturing since 2004. Exporting to 30+ countries with
+						quality, compliance, and commitment.</p>
+					<div class="social-links d-flex gap-3 mt-4">
+						<a href="#" class="social-btn"><i class="bi bi-linkedin"></i></a>
+						<a href="#" class="social-btn"><i class="bi bi-facebook"></i></a>
+						<a href="#" class="social-btn"><i class="bi bi-instagram"></i></a>
+						<a href="#" class="social-btn"><i class="bi bi-youtube"></i></a>
+					</div>
+				</div>
+				<div class="col-6 col-sm-3 col-lg-2">
+					<h6 class="footer-heading">Quick Links</h6>
+					<ul class="footer-links">
+						<li><a href="#about">About Us</a></li>
+						<li><a href="#messages">Leadership</a></li>
+						<li><a href="#products">Products</a></li>
+						<li><a href="#factory">Production</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</div>
+				<div class="col-6 col-sm-3 col-lg-2">
+					<h6 class="footer-heading">Products</h6>
+					<ul class="footer-links">
+						<li><a href="#products">Men's Wear</a></li>
+						<li><a href="#products">Ladies Wear</a></li>
+						<li><a href="#products">Denim</a></li>
+						<li><a href="#products">Outerwear</a></li>
+						<li><a href="#products">Kids Wear</a></li>
+					</ul>
+				</div>
+				<div class="col-12 col-sm-6 col-lg-4">
+					<h6 class="footer-heading">Get In Touch</h6>
+					<ul class="footer-contact-list">
+						<li><i class="bi bi-geo-alt"></i>Ashulia, Savar, Dhaka, Bangladesh</li>
+						<li><i class="bi bi-telephone"></i>+880 2 7789 0001</li>
+						<li><i class="bi bi-envelope"></i>exports@euroasia.com</li>
+						<li><i class="bi bi-clock"></i>Sun–Thu: 9:00 AM – 6:00 PM</li>
+					</ul>
+				</div>
+			</div>
+			<div
+				class="footer-bottom d-flex flex-column flex-sm-row justify-content-between align-items-center py-3 gap-2">
+				<p class="mb-0">© 2025 EUROASIA Co. All rights reserved.</p>
+				<p class="mb-0">Developed By Elite Tech Inc</p>
+			</div>
+		</div>
+	</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="public/js/script.js"></script>
+    <script src="public/js/product-detail.js"></script>
+</body>
+
+</html>

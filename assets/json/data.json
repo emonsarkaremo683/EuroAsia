@@ -1,0 +1,454 @@
+{
+  "company": {
+    "name": "EUROASIA Co.",
+    "founded": 2004,
+    "location": "Bangladesh",
+    "tagline": "Crafting Quality For Global Markets"
+  },
+  "divisions": [
+    {
+      "id": "garments",
+      "name": "Garments",
+      "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+      "description": "Premium knit and woven apparel manufacturing.",
+      "longDescription": "Our garment division is the heart of EuroAsia's operations. We have established a state-of-the-art facility that integrates every stage of garment manufacturing. From cutting and sewing to finishing and packing, our lines are optimized for efficiency, quality, and worker safety.",
+      "capabilities": [
+        "Readymade Knit Apparel",
+        "High-Volume Woven Production",
+        "AQL 1.5/2.5 QC"
+      ],
+      "stats": {
+        "Employees": "5,000+",
+        "Capacity": "2.5M Pcs/Month",
+        "Machines": "1,200+"
+      }
+    },
+    {
+      "id": "knitting",
+      "name": "Knitting",
+      "image": "https://images.unsplash.com/photo-1521369909029-2afed882baee?w=800&q=80",
+      "description": "High-quality composite knit fabric production.",
+      "longDescription": "Our knitting division utilizes the latest machinery and modern equipment in our production process for maximum quality output. We specialize in a wide range of knit structures, providing the foundation for premium apparel brands globally.",
+      "capabilities": [
+        "Single Jersey & Pique",
+        "Rib & Interlock",
+        "Custom Fabric Dev"
+      ],
+      "stats": {
+        "Daily Capacity": "20+ Tons",
+        "Machinery": "60+ Circular",
+        "Technology": "Mayer & Cie"
+      }
+    },
+    {
+      "id": "printing",
+      "name": "Printing",
+      "image": "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80",
+      "description": "Advanced screen and digital printing solutions.",
+      "longDescription": "We offer comprehensive printing services including high-density, puff, foil, and discharge prints. Our facility is equipped with MHM automatic carousels for precision and consistency across large batches.",
+      "capabilities": [
+        "MHM Automatic Screen",
+        "Digital Sublimation",
+        "ZDH Compliance"
+      ],
+      "stats": {
+        "Automatic Lines": "4",
+        "Daily Prints": "50,000+",
+        "Compliance": "OEKO-TEX"
+      }
+    }
+  ],
+  "categories": {
+    "mens": [
+      {
+        "id": "m1",
+        "name": "Non Brand Men's 1",
+        "category": "Men's Fashion",
+        "image": "https://ponditgroup.com.bd/wp-content/uploads/2024/09/Non-Brand_Mens-1.jpg",
+        "description": "Stylish men's fashion wear with a modern and comfortable design.",
+        "features": [
+          "Premium Fabric",
+          "Comfort Fit"
+        ]
+      },
+      {
+        "id": "m2",
+        "name": "Non Brand Men's 2",
+        "category": "Men's Fashion",
+        "image": "https://ponditgroup.com.bd/wp-content/uploads/2024/09/Non-Brand_Mens-2.jpg",
+        "description": "Trendy casual outfit suitable for everyday use and smart styling.",
+        "features": [
+          "Soft Material",
+          "Modern Style"
+        ]
+      },
+      {
+        "id": "m3",
+        "name": "Non Brand Men's 3",
+        "category": "Men's Fashion",
+        "image": "https://ponditgroup.com.bd/wp-content/uploads/2024/09/Non-Brand_Mens-3.jpg",
+        "description": "Comfortable and elegant fashion item for versatile occasions.",
+        "features": [
+          "Breathable Fabric",
+          "Regular Fit"
+        ]
+      },
+      {
+        "id": "m4",
+        "name": "Non Brand Men's 4",
+        "category": "Men's Fashion",
+        "image": "https://ponditgroup.com.bd/wp-content/uploads/2024/09/Non-Brand_Mens-4.jpg",
+        "description": "Premium quality men's apparel with fashionable finishing.",
+        "features": [
+          "Lightweight",
+          "Durable Stitching"
+        ]
+      },
+      {
+        "id": "m5",
+        "name": "Non Brand Men's 5",
+        "category": "Men's Fashion",
+        "image": "https://ponditgroup.com.bd/wp-content/uploads/2024/09/Non-Brand_Mens-5.jpg",
+        "description": "Smart casual wear crafted for daily comfort and style.",
+        "features": [
+          "Soft Touch",
+          "Elegant Design"
+        ]
+      },
+      {
+        "id": "m6",
+        "name": "Non Brand Men's 6",
+        "category": "Men's Fashion",
+        "image": "https://ponditgroup.com.bd/wp-content/uploads/2024/09/Non-Brand_Mens-6.jpg",
+        "description": "Modern men's outfit with premium fabric and stylish appearance.",
+        "features": [
+          "Wrinkle Resistant",
+          "Comfortable Wear"
+        ]
+      },
+      {
+        "id": "m7",
+        "name": "Non Brand Men's 7",
+        "category": "Men's Fashion",
+        "image": "https://ponditgroup.com.bd/wp-content/uploads/2024/09/Non-Brand_Mens-7.jpg",
+        "description": "Fashion-forward men's wear designed for comfort and confidence.",
+        "features": [
+          "Premium Finish",
+          "Everyday Comfort"
+        ]
+      },
+      {
+        "id": "m8",
+        "name": "Non Brand Men's 10",
+        "category": "Men's Fashion",
+        "image": "https://ponditgroup.com.bd/wp-content/uploads/2024/09/Non-Brand_Mens-10.jpg",
+        "description": "Stylish apparel suitable for both casual and semi-formal looks.",
+        "features": [
+          "Fine Texture",
+          "Regular Fit"
+        ]
+      },
+      {
+        "id": "m9",
+        "name": "Non Brand Men's 12",
+        "category": "Men's Fashion",
+        "image": "https://ponditgroup.com.bd/wp-content/uploads/2024/09/Non-Brand_Mens-12.jpg",
+        "description": "Classic men's fashion item with clean finishing and comfort.",
+        "features": [
+          "Breathable Material",
+          "Long Lasting"
+        ]
+      },
+      {
+        "id": "m10",
+        "name": "Non Brand Men's 14",
+        "category": "Men's Fashion",
+        "image": "https://ponditgroup.com.bd/wp-content/uploads/2024/09/Non-Brand_Mens-14.jpg",
+        "description": "Elegant and modern men's wear crafted with quality materials.",
+        "features": [
+          "Stylish Pattern",
+          "Comfort Fit"
+        ]
+      },
+      {
+        "id": "m11",
+        "name": "Non Brand Men's 15",
+        "category": "Men's Fashion",
+        "image": "https://ponditgroup.com.bd/wp-content/uploads/2024/09/Non-Brand_Mens-15.jpg",
+        "description": "Comfortable outfit with modern aesthetics and premium look.",
+        "features": [
+          "Smooth Fabric",
+          "Premium Quality"
+        ]
+      },
+      {
+        "id": "m12",
+        "name": "Non Brand Men's 16",
+        "category": "Men's Fashion",
+        "image": "https://ponditgroup.com.bd/wp-content/uploads/2024/09/Non-Brand_Mens-16.jpg",
+        "description": "Versatile men's apparel designed for daily fashion needs.",
+        "features": [
+          "Soft Finish",
+          "Classic Style"
+        ]
+      }
+    ],
+    "ladies": [
+      {
+        "id": "w1",
+        "name": "Non Brand 1",
+        "category": "Women's Fashion",
+        "image": "https://ponditgroup.com.bd/wp-content/uploads/2024/09/non-brand-1.jpg",
+        "description": "Elegant and comfortable fashion wear designed for modern styling.",
+        "features": [
+          "Premium Fabric",
+          "Comfort Fit"
+        ]
+      },
+      {
+        "id": "w2",
+        "name": "Non Brand 2",
+        "category": "Women's Fashion",
+        "image": "https://ponditgroup.com.bd/wp-content/uploads/2024/09/non-brand-2.jpg",
+        "description": "Stylish casual outfit suitable for everyday fashion and comfort.",
+        "features": [
+          "Soft Material",
+          "Modern Design"
+        ]
+      },
+      {
+        "id": "w3",
+        "name": "Non Brand 3",
+        "category": "Women's Fashion",
+        "image": "https://ponditgroup.com.bd/wp-content/uploads/2024/09/non-brand-3.jpg",
+        "description": "Classic fashion item with elegant finishing and lightweight comfort.",
+        "features": [
+          "Breathable Fabric",
+          "Regular Fit"
+        ]
+      },
+      {
+        "id": "w4",
+        "name": "Non Brand 4",
+        "category": "Women's Fashion",
+        "image": "https://ponditgroup.com.bd/wp-content/uploads/2024/09/non-brand-4.jpg",
+        "description": "Trendy and fashionable wear crafted for daily use and confidence.",
+        "features": [
+          "Premium Stitching",
+          "Elegant Look"
+        ]
+      },
+      {
+        "id": "w5",
+        "name": "Non Brand 5",
+        "category": "Women's Fashion",
+        "image": "https://ponditgroup.com.bd/wp-content/uploads/2024/09/non-brand-5.jpg",
+        "description": "Comfortable outfit with a stylish appearance and soft texture.",
+        "features": [
+          "Soft Finish",
+          "Lightweight"
+        ]
+      },
+      {
+        "id": "w6",
+        "name": "Non Brand 6",
+        "category": "Women's Fashion",
+        "image": "https://ponditgroup.com.bd/wp-content/uploads/2024/09/non-brand-6.jpg",
+        "description": "Premium quality fashion wear suitable for versatile styling.",
+        "features": [
+          "Wrinkle Resistant",
+          "Comfort Wear"
+        ]
+      },
+      {
+        "id": "w7",
+        "name": "Non Brand 7",
+        "category": "Women's Fashion",
+        "image": "https://ponditgroup.com.bd/wp-content/uploads/2024/09/non-brand-7.jpg",
+        "description": "Modern and elegant fashion apparel with a premium touch.",
+        "features": [
+          "Fashionable Style",
+          "Daily Comfort"
+        ]
+      },
+      {
+        "id": "w8",
+        "name": "Sefsf Collection",
+        "category": "Women's Fashion",
+        "image": "https://ponditgroup.com.bd/wp-content/uploads/2024/09/sefsf.jpg",
+        "description": "Unique designer-inspired fashion item with elegant finishing.",
+        "features": [
+          "Premium Quality",
+          "Stylish Pattern"
+        ]
+      },
+      {
+        "id": "w9",
+        "name": "Wfwfw Collection",
+        "category": "Women's Fashion",
+        "image": "https://ponditgroup.com.bd/wp-content/uploads/2024/09/wfwfw.jpg",
+        "description": "Fashion-forward apparel designed for comfort and classy styling.",
+        "features": [
+          "Modern Fit",
+          "Smooth Fabric"
+        ]
+      }
+    ],
+    "kids": [
+      {
+        "id": "b1",
+        "name": "Boys Collection 1",
+        "category": "Kids Fashion",
+        "image": "https://ponditgroup.com.bd/wp-content/uploads/2024/09/BOYS-1.jpg",
+        "description": "Comfortable and stylish boys' outfit designed for everyday fashion.",
+        "features": [
+          "Soft Fabric",
+          "Regular Fit"
+        ]
+      },
+      {
+        "id": "b2",
+        "name": "Boys Collection 2",
+        "category": "Kids Fashion",
+        "image": "https://ponditgroup.com.bd/wp-content/uploads/2024/09/BOYS-2.jpg",
+        "description": "Premium quality boys' wear with modern styling and comfort.",
+        "features": [
+          "Breathable Material",
+          "Durable Stitching"
+        ]
+      },
+      {
+        "id": "b3",
+        "name": "Boys Collection 3",
+        "category": "Kids Fashion",
+        "image": "https://ponditgroup.com.bd/wp-content/uploads/2024/09/BOYS-3.jpg",
+        "description": "Trendy boys' fashion item crafted for active daily wear.",
+        "features": [
+          "Comfort Wear",
+          "Lightweight"
+        ]
+      },
+      {
+        "id": "b4",
+        "name": "Boys Collection 4",
+        "category": "Kids Fashion",
+        "image": "https://ponditgroup.com.bd/wp-content/uploads/2024/09/BOYS-4.jpg",
+        "description": "Elegant boys' outfit with premium finishing and stylish appearance.",
+        "features": [
+          "Modern Design",
+          "Soft Finish"
+        ]
+      },
+      {
+        "id": "b5",
+        "name": "Boys Collection 5",
+        "category": "Kids Fashion",
+        "image": "https://ponditgroup.com.bd/wp-content/uploads/2024/09/BOYS-5.jpg",
+        "description": "Fashionable boys' apparel suitable for casual and outdoor wear.",
+        "features": [
+          "Premium Fabric",
+          "Comfort Fit"
+        ]
+      },
+      {
+        "id": "b6",
+        "name": "Boys Collection 6",
+        "category": "Kids Fashion",
+        "image": "https://ponditgroup.com.bd/wp-content/uploads/2024/09/BOYS-6.jpg",
+        "description": "Smart and modern boys' fashion with long-lasting comfort.",
+        "features": [
+          "Wrinkle Resistant",
+          "Stylish Look"
+        ]
+      },
+      {
+        "id": "b7",
+        "name": "Boys Collection 8",
+        "category": "Kids Fashion",
+        "image": "https://ponditgroup.com.bd/wp-content/uploads/2024/09/BOYS-8.jpg",
+        "description": "Premium boys' wear designed with comfort and trendy aesthetics.",
+        "features": [
+          "Smooth Texture",
+          "Daily Comfort"
+        ]
+      },
+      {
+        "id": "b8",
+        "name": "Boys Collection 7",
+        "category": "Kids Fashion",
+        "image": "https://ponditgroup.com.bd/wp-content/uploads/2024/09/BOYS-7.jpg",
+        "description": "Classic boys' outfit with stylish patterns and premium quality.",
+        "features": [
+          "Breathable Fabric",
+          "Elegant Fit"
+        ]
+      }
+    ]
+  },
+  "certificates": {
+    "standards": [
+      {
+        "name": "ISO 9001",
+        "desc": "Quality Mgmt.",
+        "icon": "bi-shield-check"
+      },
+      {
+        "name": "GOTS",
+        "desc": "Organic Textile",
+        "icon": "bi-tree"
+      },
+      {
+        "name": "WRAP",
+        "desc": "Social Compliance",
+        "icon": "bi-globe"
+      },
+      {
+        "name": "OEKO-TEX®",
+        "desc": "Safety",
+        "icon": "bi-check-circle"
+      }
+    ]
+  },
+  "clients": [
+    {
+      "name": "Walmart",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Walmart_logo.svg"
+    },
+    {
+      "name": "H&M",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/53/H%26M-Logo.svg"
+    },
+    {
+      "name": "Zara",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Zara_Logo.svg"
+    },
+    {
+      "name": "Uniqlo",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/92/UNIQLO_logo.svg"
+    }
+  ],
+  "leadership": {
+    "ceo": {
+      "name": "Mr. Rafiqul Islam",
+      "title": "Chief Executive Officer",
+      "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=80",
+      "tag": "CEO",
+      "intro": "At EUROASIA, our journey began with a simple but powerful belief — that Bangladesh's garment industry can lead the world not just in volume, but in quality and integrity.",
+      "content": [
+        "Every garment that leaves our factory carries our reputation. We invest deeply in our workforce — training, welfare, and safety — because we know that great products come from great people.",
+        "To our valued buyers and partners: we are your manufacturing partner, committed to your success as much as our own."
+      ]
+    },
+    "md": {
+      "name": "Ms. Nusrat Jahan",
+      "title": "Managing Director",
+      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80",
+      "tag": "MD",
+      "intro": "Leading EUROASIA as Managing Director has been a privilege. My focus has always been on operational excellence and meticulous attention to detail.",
+      "content": [
+        "In today's competitive global market, what sets us apart is our culture. A culture where problems are solved proactively and deadlines are sacred.",
+        "I am particularly proud of our sustainability journey. We have reduced water consumption by 35% and transitioned to renewable energy for 40% of our operations."
+      ]
+    }
+  }
+}

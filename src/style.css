@@ -1,0 +1,168 @@
+:root {
+    --teal: #0d9488;
+    --teal-hover: #0f766e;
+    --teal-light: #ccfbf1;
+    --navy: #0f172a;
+    --navy-light: #1e293b;
+    --text-color: #475569;
+    --bg-color: #f8fafc;
+    --card-bg: #ffffff;
+    --border-color: #e2e8f0;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    -webkit-font-smoothing: antialiased;
+}
+
+.font-serif {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+/* Color Overrides & Utilities */
+.text-navy { color: var(--navy) !important; }
+.text-bg-teal { background-color: var(--teal) !important; color: white !important; }
+.text-teal { color: var(--teal) !important; }
+.bg-teal-subtle { background-color: var(--teal-light) !important; }
+.tracking-wide { letter-spacing: 0.1em; }
+
+/* Hero Styling */
+.products-hero {
+    background: linear-gradient(180deg, #ffffff 0%, var(--bg-color) 100%);
+    position: relative;
+}
+
+.hero-bg-decoration {
+    top: -40%;
+    right: -5%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(13, 148, 136, 0.08) 0%, transparent 60%);
+    border-radius: 50%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Category Header Component */
+.category-icon-wrapper {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--teal), var(--teal-hover));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.nav-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid var(--border-color);
+    color: var(--navy);
+    transition: all 0.2s ease-in-out;
+}
+.nav-btn:hover {
+    background-color: var(--teal);
+    color: white;
+    border-color: var(--teal);
+    transform: scale(1.05);
+}
+
+/* Horizontal Scroll Container (The Carousel) */
+.horizontal-scroll-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 1.5rem;
+    padding: 0.5rem 0.5rem 1.5rem 0.5rem; /* Add padding to prevent shadow clipping */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+.horizontal-scroll-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, etc */
+}
+
+/* Product Card Re-design */
+.product-card {
+    min-width: 310px;
+    max-width: 310px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+    background: var(--card-bg);
+    overflow: hidden;
+}
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08); /* Sophisticated subtle drop shadow */
+    border-color: var(--teal);
+}
+
+.img-wrapper {
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--border-color);
+    border-radius: 20px 20px 0 0;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.product-card:hover .img-wrapper img {
+    transform: scale(1.08);
+}
+
+.category-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    color: var(--navy);
+    font-weight: 700;
+    border-radius: 8px;
+    padding: 0.4rem 0.75rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.feature-tag {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+/* Buttons */
+.btn-teal {
+    background-color: var(--teal);
+    color: white;
+    border: none;
+    transition: background-color 0.2s;
+}
+.btn-teal:hover {
+    background-color: var(--teal-hover);
+    color: white;
+}
+.btn-outline-dark:hover {
+    background-color: var(--navy);
+    color: white;
+}
