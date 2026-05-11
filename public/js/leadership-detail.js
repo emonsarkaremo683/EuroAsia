@@ -11,27 +11,33 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     const urlParams = new URLSearchParams(window.location.search);
-    const leaderId = urlParams.get('id') || 'ceo';
-    const data = appData.leadership ? appData.leadership[leaderId] : null;
+    const leaderId = (urlParams.get('id') || 'ceo').toLowerCase();
+    
+    let data = null;
+    if (Array.isArray(appData.leadership)) {
+        data = appData.leadership.find(l => l.tag.toLowerCase() === leaderId);
+    } else if (appData.leadership) {
+        data = appData.leadership[leaderId];
+    }
 
     const content = document.getElementById('leadershipContent');
     if(content && data) {
         const paragraphs = data.content ? data.content.map(p => `<p>${p}</p>`).join('') : '';
+        const phoneHtml = data.phone ? `<div class="mt-3 text-muted"><i class="bi bi-telephone me-2"></i>${data.phone}</div>` : '';
+        
         content.innerHTML = `
             <div class="row g-5 align-items-start">
                 <div class="col-12 col-lg-5 text-center text-lg-start" data-animate="fade-right">
                     <div class="profile-img-wrap">
-                        <span class="profile-tag">${data.tag}</span>
+                        <span class="profile-tag ${data.tag.toLowerCase()}-tag">${data.tag}</span>
                         <img src="${data.image}" alt="${data.name}" class="profile-img">
                     </div>
+                    ${phoneHtml}
                 </div>
                 <div class="col-12 col-lg-7 profile-content" data-animate="fade-left">
                     <h1 class="profile-name">${data.name}</h1>
-                    <span class="profile-title">${data.title}</span>
-                    <div class="profile-intro">
-                        "${data.intro}"
-                    </div>
-                    <div class="profile-text text-muted">
+                    <span class="profile-title">${data.role || data.title}</span>
+                    <div class="profile-text mt-4">
                         ${paragraphs}
                     </div>
                 </div>

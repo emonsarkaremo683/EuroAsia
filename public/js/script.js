@@ -214,6 +214,32 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
     // Initialize Marquees
     initMarquees();
+
+    // Populate Leadership Messages
+    const leadershipMessagesContainer = document.querySelector('#messages .row.g-4');
+    if (leadershipMessagesContainer && appData && appData.leadership) {
+        const ceoData = appData.leadership.find(leader => leader.tag === 'CEO');
+        const mdData = appData.leadership.find(leader => leader.tag === 'MD');
+        const directorData = appData.leadership.find(leader => leader.tag === 'Director');
+
+        const populateLeaderCard = (cardId, leader) => {
+            if (!leader) return;
+            const card = document.getElementById(cardId);
+            if (card) {
+                card.querySelector('.message-avatar-img').src = leader.image;
+                card.querySelector('.message-avatar-img').alt = leader.name;
+                card.querySelector('.message-name').textContent = leader.name;
+                card.querySelector('.message-title').textContent = leader.role;
+                card.querySelector('.msg-visible').textContent = leader.content[0].substring(0, 200) + '...';
+                card.querySelector('.btn-see-more').onclick = () => { window.location.href=`leadership.html?id=${leader.tag.toLowerCase()}` };
+            }
+        };
+        
+        populateLeaderCard('ceoCard', ceoData);
+        populateLeaderCard('mdCard', mdData);
+        populateLeaderCard('directorCard', directorData);
+        observeNewElements(leadershipMessagesContainer);
+    }
 });
 
 function initMarquees() {
@@ -384,7 +410,7 @@ function submitForm() {
       // ↓ Update these numbers to match your real data
       animateStat(document.getElementById('gfS1'), 30, '+');
       animateStat(document.getElementById('gfS2'),  5, '');
-      animateStat(document.getElementById('gfS3'), 15, '+');
+      animateStat(document.getElementById('gfS3'),  6, '+');
       animateStat(document.getElementById('gfS4'), 500, '+');
     }
   }, { threshold: 0.2 });

@@ -11,6 +11,7 @@
   --green:        #0d9488;
   --green-light:  #14b8a6;
   --green-pale:   #f0fdfa;
+  --indigo:       #4f46e5;
   --gold:         #d97706;
   --white:        #FFFFFF;
   --off-white:    #f8fafc;
@@ -260,8 +261,9 @@ a { text-decoration: none; transition: var(--tr); }
   font-size: .65rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
   padding: 5px 14px; border-radius: 100px;
 }
-.ceo-tag { background: var(--navy); color: var(--white); }
-.md-tag  { background: var(--green); color: var(--white); }
+.ceo-tag     { background: var(--navy); color: var(--white); }
+.md-tag      { background: var(--green); color: var(--white); }
+.director-tag { background: var(--indigo); color: var(--white); }
 
 /* Header — avatar + name */
 .message-header {
