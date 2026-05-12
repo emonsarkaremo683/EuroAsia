@@ -201,7 +201,7 @@
       "name": "MD. Farid Molla",
       "phone": "+88 01740-196985",
       "tag": "CEO",
-      "image": "/images/ceo.jpeg",
+      "image": "public/images/ceo.jpeg",
       "content": [
         "Building trust and maintaining strong relationships are the foundations of our success in today’s competitive global market.",
         "We are committed to delivering the highest value to our customers and business partners through quality, reliability, and continuous improvement.",
@@ -214,7 +214,7 @@
       "name": "Jalal Mahmud",
       "phone": "+880 1765-779410",
       "tag": "MD",
-      "image": "/images/md.jpeg",
+      "image": "public/images/md.jpeg",
       "content": [
         "Maintaining trust is more important than ever in today's global business environment.",
         "We continuously strive to maximize the value we bring to our Customers and Business Partners.",
@@ -227,7 +227,7 @@
       "name": "MD. Mustafizur Rahman",
       "phone": "",
       "tag": "Director",
-      "image": "/images/director.jpeg",
+      "image": "public/images/director.jpeg",
       "content": [
         "Strong leadership and operational discipline are the cornerstones of our continued success.",
         "At Euro-Asia Apparels Ltd, we emphasize teamwork, innovation, and accountability across every division.",
