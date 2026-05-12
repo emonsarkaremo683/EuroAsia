@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', async () => {
     let appData = null;
     try {
-        const res = await fetch('../../assets/json/data.json');
+        const res = await fetch('assets/json/data.json');
         appData = await res.json();
     } catch (e) {
-        console.error("Failed to load Product.json:", e);
+        console.error("Failed to load data.json:", e);
         const content = document.getElementById('leadershipContent');
         if (content) content.innerHTML = `<div class="alert alert-danger">Error loading data. Please try again later.</div>`;
         return;

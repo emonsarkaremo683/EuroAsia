@@ -1,3 +1,4 @@
+
 {
   "company": {
     "name": "Euro-Asia Apparels Ltd",
@@ -14,7 +15,7 @@
       "longDescription": "Our knitwear division is equipped with high-speed production lines and cutting-edge automation. We produce a wide range of knit items including T-shirts, Polo-shirts, and Sweatshirts with meticulous attention to quality and compliance.",
       "capabilities": [
         "High-Speed Knit Production",
-        "In-house Fabric Sourcing",
+        "in-house Fabric Sourcing",
         "AQL 2.5 Quality Standards"
       ],
       "stats": {
@@ -200,7 +201,7 @@
       "name": "MD. Farid Molla",
       "phone": "+88 01740-196985",
       "tag": "CEO",
-      "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=80",
+      "image": "/images/ceo.jpeg",
       "content": [
         "Building trust and maintaining strong relationships are the foundations of our success in today’s competitive global market.",
         "We are committed to delivering the highest value to our customers and business partners through quality, reliability, and continuous improvement.",
@@ -213,7 +214,7 @@
       "name": "Jalal Mahmud",
       "phone": "+880 1765-779410",
       "tag": "MD",
-      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80",
+      "image": "/images/md.jpeg",
       "content": [
         "Maintaining trust is more important than ever in today's global business environment.",
         "We continuously strive to maximize the value we bring to our Customers and Business Partners.",
@@ -226,7 +227,7 @@
       "name": "MD. Mustafizur Rahman",
       "phone": "",
       "tag": "Director",
-      "image": "https://images.unsplash.com/photo-1506794778202-cb33dfe8c85f?w=800&q=80",
+      "image": "/images/director.jpeg",
       "content": [
         "Strong leadership and operational discipline are the cornerstones of our continued success.",
         "At Euro-Asia Apparels Ltd, we emphasize teamwork, innovation, and accountability across every division.",
@@ -237,3 +238,4 @@
     }
   ]
 }
+
