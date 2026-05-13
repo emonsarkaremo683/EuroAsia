@@ -59,24 +59,58 @@
         "id": "m2",
         "name": "Men's Polo-Shirt",
         "category": "Knitwear",
-        "image": "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=800&q=80",
+        "image": "assets/images/IMG-20260514-WA0011.jpg",
         "description": "Classic polo shirt with durable stitching.",
         "features": [
           "Pique Knit",
           "Regular Fit"
         ]
       },
+
+
       {
         "id": "m3",
         "name": "Men's Sweat Shirt",
         "category": "Knitwear",
-        "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=800&q=80",
+        "image": "assets/images/IMG-20260514-WA0015.jpg",
         "description": "Warm and comfortable fleece sweatshirt.",
         "features": [
           "Soft Fleece",
           "Modern Cut"
         ]
       },
+
+      {
+        "id": "m3",
+        "name": "Men's Sweat Shirt",
+        "category": "Knitwear",
+        "image": "assets/images/IMG-20260514-WA0017.jpg",
+        "description": "Warm and comfortable fleece sweatshirt.",
+        "features": [
+          "Soft Fleece",
+          "Modern Cut"
+        ]
+      },
+
+      {
+        "id": "m3",
+        "name": "Men's Sweat Shirt",
+        "category": "Knitwear",
+        "image": "assets/images/IMG-20260514-WA0018.jpg",
+        "description": "Warm and comfortable fleece sweatshirt.",
+        "features": [
+          "Soft Fleece",
+          "Modern Cut"
+        ]
+      },
+
+
+
+
+
+
+
+
       {
         "id": "m4",
         "name": "Men's Trouser",
@@ -94,7 +128,7 @@
         "id": "w1",
         "name": "Ladies Tank-Top",
         "category": "Knitwear",
-        "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&q=80",
+        "image": "assets/images/IMG-20260514-WA0019.jpg",
         "description": "Lightweight and stylish tank top for women.",
         "features": [
           "Soft Touch",
@@ -122,25 +156,73 @@
           "Full Zip",
           "Ribbed Cuffs"
         ]
-      }
+      } 			
+, {
+
+        "id": "w3",
+        "name": "Ladies Jacket",
+        "category": "Knitwear",
+        "image": "assets/images/IMG-20260514-WA0016.jpg",
+        "description": "Fashionable hoody jacket with premium hardware.",
+        "features": [
+          "Full Zip",
+          "Ribbed Cuffs"
+        ]
+
+}
+
+
+
+
+
+
     ],
     "kids": [
       {
         "id": "k1",
-        "name": "Kids Pajama Set",
+        "name": "Kids Set",
         "category": "Childrenwear",
-        "image": "https://images.unsplash.com/photo-1519233157930-464878a101e4?w=800&q=80",
+        "image": "assets/images/IMG-20260514-WA0012.jpg",
         "description": "Soft and safe pajama set for children.",
         "features": [
           "Child Safe",
           "Soft Material"
         ]
       },
+
+ {
+        "id": "k1",
+        "name": "Kids Set",
+        "category": "Childrenwear",
+        "image": "assets/images/IMG-20260514-WA0013.jpg",
+        "description": "Soft and safe pajama set for children.",
+        "features": [
+          "Child Safe",
+          "Soft Material"
+        ]
+      },
+
+ {
+        "id": "k1",
+        "name": "Kids Set",
+        "category": "Childrenwear",
+        "image": "assets/images/IMG-20260514-WA0014.jpg",
+        "description": "Soft and safe pajama set for children.",
+        "features": [
+          "Child Safe",
+          "Soft Material"
+        ]
+      },
+
+
+
+
+
       {
         "id": "k2",
         "name": "Kids Shorts",
         "category": "Childrenwear",
-        "image": "https://images.unsplash.com/photo-1519457431-758950454371?w=800&q=80",
+        "image": "assets/images/IMG-20260514-WA0018.jpg",
         "description": "Durable and breathable shorts for kids.",
         "features": [
           "Adjustable Waist",
