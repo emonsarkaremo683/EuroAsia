@@ -170,35 +170,52 @@
         "name": "QC",
         "desc": "AQL 2.5",
         "icon": "bi-check-circle"
+      },
+      {
+        "name": "BSCI",
+        "desc": "Business Social Compliance Initiative",
+        "image": "public/images/bsci.png"
+      },
+      {
+        "name": "OEKO-TEX",
+        "desc": "Confidence in Textiles",
+        "image": "public/images/oeko.png"
       }
     ]
   },
   "clients": [
     {
-      "name": "USA Markets",
-      "image": "https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg"
+      "name": "USA Markets"
     },
     {
-      "name": "EU Markets",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Flag_of_Europe.svg"
+      "name": "EU Markets"
     },
     {
-      "name": "UK Markets",
-      "image": "https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg"
+      "name": "UK Markets"
     },
     {
-      "name": "Japan Markets",
-      "image": "https://upload.wikimedia.org/wikipedia/en/9/9e/Flag_of_Japan.svg"
+      "name": "Japan Markets"
     },
     {
-      "name": "Australia Markets",
-      "image": "https://upload.wikimedia.org/wikipedia/en/b/b9/Flag_of_Australia.svg"
+      "name": "Australia Markets"
+    },
+    {
+      "name": "C.Q GREEN LEAF S.L (Spain)"
+    },
+    {
+      "name": "SALT & PEPPER GERMANY"
+    },
+    {
+      "name": "TOPO"
+    },
+    {
+      "name": "ELVINA FRANCE"
     }
   ],
   "leadership": [
     {
       "role": "Chief Executive Officer",
-      "name": "MD. Farid Molla",
+      "name": "Jalal Mahmud",
       "phone": "+88 01740-196985",
       "tag": "CEO",
       "image": "public/images/ceo.jpeg",
@@ -211,7 +228,7 @@
     },
     {
       "role": "Managing Director",
-      "name": "Jalal Mahmud",
+      "name": "MD. Mustafizur Rahman",
       "phone": "+880 1765-779410",
       "tag": "MD",
       "image": "public/images/md.jpeg",
@@ -224,7 +241,7 @@
     },
     {
       "role": "Director",
-      "name": "MD. Mustafizur Rahman",
+      "name": "MD. Farid Molla",
       "phone": "",
       "tag": "Director",
       "image": "public/images/director.jpeg",

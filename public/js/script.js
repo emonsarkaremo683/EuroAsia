@@ -131,7 +131,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         certsGrid.innerHTML = appData.certificates.standards.map((c, i) => `
             <div class="col-6 col-sm-4 col-lg-3" data-animate="fade-up" data-delay="${i * 80}">
                 <div class="cert-card">
-                    <div class="cert-icon"><i class="bi ${c.icon}"></i></div>
+                    <div class="cert-icon">
+                        ${c.image ? `<img src="${c.image}" alt="${c.name}" style="height: 40px; object-fit: contain;">` : `<i class="bi ${c.icon}"></i>`}
+                    </div>
                     <h6 class="cert-name mb-1">${c.name}</h6>
                     <span class="cert-desc">${c.desc}</span>
                 </div>
@@ -195,8 +197,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Populate Clients Marquee
     if (appData && appData.clients) {
         const clientGroupHtml = appData.clients.map(client => `
-            <div class="px-5">
-                <img src="${client.image}" alt="${client.name}" style="height: 40px; opacity: 0.6; filter: grayscale(100%); transition: all 0.3s ease;" class="client-logo-hover">
+            <div class="px-5 text-center">
+                <div class="client-name-label" style="font-size: 1.1rem; color: #333; font-weight: 600; white-space: nowrap;">${client.name}</div>
             </div>
         `).join('');
 
@@ -205,7 +207,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (g1 && g2) {
             // Repeat to fill space if few clients
             let finalHtml = clientGroupHtml;
-            while (finalHtml.split('<img').length < 8) {
+            while (finalHtml.split('<div class="client-name-label"').length < 8) {
                 finalHtml += clientGroupHtml;
             }
             g1.innerHTML = finalHtml;
@@ -339,9 +341,37 @@ function initMarquees() {
     });
 }
 
-function submitForm() {
+window.submitForm = () => {
     const form = document.getElementById('contactForm');
     const success = document.getElementById('formSuccess');
+
+    const fullName = form.querySelector('input[placeholder="John Smith"]').value;
+    const companyName = form.querySelector('input[placeholder="Your Company"]').value;
+    const emailAddress = form.querySelector('input[placeholder="john@company.com"]').value;
+    const phoneWhatsApp = form.querySelector('input[placeholder="+1 234 567 890"]').value;
+    const productCategory = form.querySelector('.cf-input.form-select').value;
+    const message = form.querySelector('textarea[placeholder="Tell us about your requirements, quantity, target price, delivery date..."]').value;
+
+    if (!fullName || !emailAddress || !message) {
+        alert("Please fill in all required fields (*)");
+        return;
+    }
+
+    const subject = `Inquiry from ${fullName} - ${companyName || 'EuroAsia Website'}`;
+    const body = `
+Name: ${fullName}
+Company: ${companyName || 'N/A'}
+Email: ${emailAddress}
+Phone/WhatsApp: ${phoneWhatsApp || 'N/A'}
+Category: ${productCategory || 'N/A'}
+
+Message:
+${message}
+    `.trim();
+
+    const mailtoLink = `mailto:exports@euroasia.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoLink;
+
     if (form && success) {
         form.classList.add('d-none');
         success.classList.remove('d-none');
